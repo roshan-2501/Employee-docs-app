@@ -11,14 +11,20 @@ This is a Spring Boot application for managing employee details and their docume
 - Java 17+
 - Spring Boot
 - Spring Data JPA
-- H2 / MySQL (configurable)
+- PostgreSQL
 - Maven
 - REST APIs
 - Postman (for testing)
 
-## 🚀 How to Run
+## 🛠 Database Configuration (PostgreSQL)
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/employee-docs-app.git
-   cd employee-docs-app
+Make sure you have PostgreSQL running locally.
+
+Update your `application.properties` or `application.yml`:
+
+```properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/your_db_name
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
